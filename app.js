@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'client/build')));
 
-const connection=mongoose.connect(mongodb://localhost:27017 , {useUnifiedTopology: true,useNewUrlParser: true});
+const connection=mongoose.connect('mongodb://localhost:27017' , {useUnifiedTopology: true,useNewUrlParser: true});
 connection.then(db=>console.log("Connected"));
 
 app.use(cors());
